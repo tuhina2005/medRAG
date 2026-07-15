@@ -1,14 +1,13 @@
 # 🩺 Medical RAG Chatbot
+An AI-powered medical Q&A chatbot that answers questions using **verified encyclopedic knowledge** — not the open internet. Built with Retrieval-Augmented Generation (RAG) so every answer is grounded in real medical literature.
 
-> An AI-powered medical Q&A chatbot that answers questions using **verified encyclopedic knowledge** — not the open internet. Built with Retrieval-Augmented Generation (RAG) so every answer is grounded in real medical literature.
 
----
 
 ## What It Does
 
 Ask any medical question in plain English and the chatbot retrieves the most relevant passages from a curated library of medical encyclopedias, then uses a large language model to synthesize a structured, detailed answer — citing only what the documents actually say.
 
----
+
 
 ## Knowledge Base
 
@@ -24,7 +23,7 @@ The chatbot is powered by **5 volumes of the Gale Encyclopedia of Medicine (2nd 
 
 Together these volumes contain **thousands of medical entries** spanning diseases, drugs, diagnostic tests, and clinical procedures — making the chatbot capable of answering a wide range of medical questions with authoritative context.
 
----
+
 
 ## ✨ Features
 
@@ -34,7 +33,7 @@ Together these volumes contain **thousands of medical entries** spanning disease
 -  **Grounded answers** — LLM is strictly constrained to answer only from retrieved context
 -  **Clean chat UI** 
 
----
+
 
 ## 🏗️ Architecture
 
@@ -65,7 +64,7 @@ User Query
 
 **Two-stage retrieval** is the key design decision: a condensation LLM call first rewrites ambiguous follow-up questions ("What are its side effects?") into self-contained queries ("What are the side effects of metformin?") before hitting the vector store — making multi-turn conversations work correctly.
 
----
+
 
 ## 🧱 Tech Stack
 
