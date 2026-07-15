@@ -70,7 +70,7 @@ User Query
 ## 🧱 Tech Stack
 
 | Layer | Technology |
-|-------|-----------|-----|
+|-------|-----------|
 | LLM | LLaMA 3.1 8B via Groq | 
 | Embeddings | `all-MiniLM-L6-v2` (HuggingFace) | 
 | Vector Store | FAISS (local) | 
