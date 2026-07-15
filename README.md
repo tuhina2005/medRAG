@@ -4,15 +4,13 @@
 
 ---
 
-## 🧠 What It Does
+## What It Does
 
 Ask any medical question in plain English and the chatbot retrieves the most relevant passages from a curated library of medical encyclopedias, then uses a large language model to synthesize a structured, detailed answer — citing only what the documents actually say.
 
-No hallucinations. No guesses. Just grounded medical knowledge.
-
 ---
 
-## 📚 Knowledge Base
+## Knowledge Base
 
 The chatbot is powered by **5 volumes of the Gale Encyclopedia of Medicine (2nd Edition)** — a comprehensive, peer-reviewed medical reference covering thousands of conditions, treatments, symptoms, and diagnostics.
 
@@ -30,11 +28,11 @@ Together these volumes contain **thousands of medical entries** spanning disease
 
 ## ✨ Features
 
-- 📄 **PDF ingestion** — Bulk-loads and parses all encyclopedia volumes using PyPDF
-- 🔍 **Semantic search** — Finds the most relevant passages using vector similarity (not just keywords)
-- 💬 **Multi-turn conversation** — Remembers chat history and resolves follow-up questions correctly
-- 🤖 **Grounded answers** — LLM is strictly constrained to answer only from retrieved context
-- 🎨 **Clean chat UI** — Dark glassmorphism interface, no external dependencies
+-  **PDF ingestion** — Bulk-loads and parses all encyclopedia volumes using PyPDF
+-  **Semantic search** — Finds the most relevant passages using vector similarity (not just keywords)
+-  **Multi-turn conversation** — Remembers chat history and resolves follow-up questions correctly
+-  **Grounded answers** — LLM is strictly constrained to answer only from retrieved context
+-  **Clean chat UI** 
 
 ---
 
@@ -71,15 +69,15 @@ User Query
 
 ## 🧱 Tech Stack
 
-| Layer | Technology | Why |
+| Layer | Technology |
 |-------|-----------|-----|
-| LLM | LLaMA 3.1 8B via Groq | Sub-200ms inference, free tier available |
-| Embeddings | `all-MiniLM-L6-v2` (HuggingFace) | Runs fully offline, no API cost |
-| Vector Store | FAISS (local) | Zero infrastructure, runs in-process |
+| LLM | LLaMA 3.1 8B via Groq | 
+| Embeddings | `all-MiniLM-L6-v2` (HuggingFace) | 
+| Vector Store | FAISS (local) | 
 | RAG Framework | LangChain | History-aware retrieval chain |
-| PDF Parsing | PyPDF + LangChain DirectoryLoader | Bulk-loads entire directories |
-| Backend | Flask | Lightweight, perfect for 2-route app |
-| Frontend | HTML / Vanilla CSS | No build step, no dependencies |
+| PDF Parsing | PyPDF + LangChain DirectoryLoader | 
+| Backend | Flask |
+| Frontend | HTML / CSS |
 
 ---
 
@@ -107,7 +105,6 @@ Create a `.env` file in the root directory:
 ```
 GROQ_API_KEY=your_groq_api_key_here
 ```
-Get a free API key at [console.groq.com](https://console.groq.com)
 
 ### 5. Build the vector store (first time only)
 ```bash
@@ -154,6 +151,3 @@ medRAG/
 
 ---
 
-## ⚠️ Disclaimer
-
-This chatbot is for **educational purposes only**. It does not provide medical advice, diagnosis, or treatment recommendations. Always consult a qualified healthcare professional for medical decisions.
